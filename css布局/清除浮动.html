@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            /* float: left; */
+            /* position: absolute; */
+            border: 1px solid black;
+            padding : 5px;
+            width: 450px;
+            /* height: 100px; */
+            /* overflow:hidden ; */
+
+        }
+        .clearfix::after {
+            content: "";
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+        .clearfix {
+            *zoom: 1;
+        }
+        .left {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .right {
+            float: right;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        /* .clear {
+            clear: both;
+        } */
+        .con {
+            height: 200px;
+            width: 200px;
+            background-color: orange;
+        }
+
+        .header {
+            height: 400px;
+            width: 400px;
+            margin-top: 20px;
+            background-color: yellow;
+        }
+        .footer {
+            height: 200px;
+            width: 200px;
+            margin-top:40px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="box clearfix">
+        <div class="left">left</div>
+        <div class="right">right</div>
+        <!-- <div class="clear"></div> -->
+    </div>
+    <div class="con">浮动之后父元素高度塌陷
+        1.将父元素也设置成浮动 缺点是父元素也会脱离文档流
+        2.末尾添加空元素，添加clear：both
+        3.给父元素添加overflow:hidden
+        4.给父元素添加伪元素进行clear
+    </div>
+
+    <div class="header">
+
+        BFC的全称是“BFC(Block Formatting Context) 块级格式化上下文”，
+        它决定了元素如何对其内容进行定位。
+        将盒子设为BFC容器时，恰好可以抵消浮动带来的影响，
+        BFC就是页面上的一个隔离的独立的容器，在计算BFC容器高度时，
+        会把其中的浮动元素的高度也计算其内
+
+        BFC容器还有另一个常用的作用，它可以解决margin的重叠问题。
+
+    </div>
+    <div class="footer">xxxxx</div>
+</body>
+</html>
