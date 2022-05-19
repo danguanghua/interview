@@ -1,0 +1,221 @@
+.bigBox {
+    display: flex;
+    /* 定义主轴方向 */
+    flex-direction: row;
+    /* 定义如何换行 */
+    flex-wrap: wrap;
+    /* 项目在主轴上的对齐方式 */
+    justify-content: flex-start; 
+    background-color: green;
+}
+.box {
+    position: relative;
+    left : 200px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    margin-top: 10px;
+}
+.item {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    /* 1.绝对定位 + 负margin值 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+}
+.box1 {
+    position: relative;
+    left : 200px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    margin-top: 10px;
+}
+.item1 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    /* 绝对定位 + transform */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.box2 {
+    position: relative;
+    left : 200px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    margin-top: 10px;
+}
+.item2 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    /* 绝对定位 + top/right/bottom/left */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.box3 {
+    position: relative;
+    left : 200px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    margin-top: 10px;
+    /* flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.item3 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+
+}
+.box4 {
+    position: relative;
+    left : 200px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    margin-top: 10px;
+    /* grid */
+    display: grid;
+
+
+}
+.item4 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    margin: auto;
+
+}
+.box5 {
+    position: relative;
+    left : 200px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    margin-top: 10px;
+    /* grid */
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+
+}
+.item5 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    /* margin: auto; */
+    display: inline-block;
+
+}
+
+
+/* 不定宽和高 */
+.bigBox1 {
+    height: 300px;
+    background-color: green;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 绝对定位 + transform */
+.wrap {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 1px solid yellow;
+}
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+}
+
+/* table-cell */
+.wrap1 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid yellow;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.text1 {
+    display: inline-block;
+    background-color: red;
+}
+
+/* flex */
+.wrap2 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text2 {
+    /* display: inline-block; */
+    background-color: red;
+}
+
+/* grid + margin */
+.wrap3 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid yellow;
+    display: grid;
+}
+.text3 {
+    margin: auto;
+    background-color: red;
+}
+
+/* flex 变异 */
+.wrap4 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid yellow;
+    display: flex;
+}
+.text4 {
+    margin: auto;
+    background-color: red;
+}
+
+
+/* grid */
+.wrap5 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid yellow;
+    display: grid;
+}
+.text5 {
+    /* margin: auto; */
+    justify-self: center;
+    align-self: center;
+    background-color: red;
+}
