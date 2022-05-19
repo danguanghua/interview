@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header, footer {
+            height: 80px;
+            background-color: blue;
+        }
+        .left, .right, .wrapper {
+            float: left;
+        }
+        .wrapper {
+            width: 100%;
+        }
+        .content {
+            height: 400px;
+            margin: 0 200px;
+            background-color: red;
+        }
+        .left {
+            width: 200px;
+            height: 400px;
+            margin-left: -100%;
+            background-color: orange;
+        }
+        .right {
+            width: 200px;
+            height: 400px;
+            margin-left: -200px;
+            background-color: orange;
+        }
+        footer {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>头部</header>
+    <div class="wrapper">
+        <div class="content">content</div>
+    </div>
+    <div class="left">left</div>
+    <div class="right">right</div>
+    <footer>footer</footer>
+</body>
+</html>
