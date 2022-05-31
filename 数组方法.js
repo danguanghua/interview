@@ -1,6 +1,6 @@
 //创建数组
 let arr1 = [1,2,3]
-let arr2 = new Array(2,2);
+let arr2 = new Array(2);
 console.log('arr1', arr1);
 console.log('arr2', arr2);
 
@@ -216,3 +216,24 @@ console.log('arr4', arr4)
         console.log('w', w)
 
 //ES6 keys()&values()&entries() 遍历键名、遍历键值、遍历键名+键值
+
+
+//判断是否是数组的方法
+
+        let arr30 = [];
+        let x = 2
+        // 1.Array.isArray()
+        console.log(Array.isArray(arr30))
+        console.log(Array.isArray(x))
+
+        // 2.instanceof 
+        let arr31 = [];
+        console.log(arr31 instanceof Array)
+
+        //3.isPrototypeOf
+        let arr32 = [];
+        console.log(Array.prototype.isPrototypeOf(arr32))
+
+        //4.Object.prototype.toString()
+        let arr33 =[]
+        console.log(Object.prototype.toString.call(arr33))

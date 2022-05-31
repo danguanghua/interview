@@ -36,3 +36,32 @@ console.log('fn.__proto__', fn.__proto__);
 // 参考链接：https://juejin.cn/post/7007416743215759373#heading-15
 
 
+inner = 0
+    function say(){
+      console.log(inner)
+      console.log(this.inner)
+    }
+    let obj1 = {
+      inner:'1-1',
+      say(){
+        let inner = '1-2'
+        console.log(inner)
+        console.log(this.inner)
+      }
+    }
+    let obj2 = {
+      inner:'2-1',
+      say(){
+        let inner = '2-2'
+        console.log(inner)
+        console.log(this.inner)
+      }
+    }
+    say()
+    obj1.say()
+    obj2.say()
+    obj1.say = say
+    obj1.say()
+    obj2.say = obj1.say
+    obj2.say()
+
