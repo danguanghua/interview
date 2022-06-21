@@ -1,5 +1,11 @@
 git log 查看提交日志
 切换分支
+
+//工作区到暂存区
+1.git add xxx //把xxx文件从工作区添加到暂存区
+2.git add . //把工作区的所有文件添加到暂存区
+
+
 git checkout main //到主分支
 将子分支合并到主分支
 git merge dandan //将子分支dandan合并到主分支 main
