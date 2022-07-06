@@ -7,7 +7,7 @@ const debounce = (fun, delay = 500) => {
     let timer = null;
     return function(...args) {
         clearTimeout(timer);
-        console.log(args, this)
+        // console.log(args, this)
         timer = setTimeout(()=> {
             fun.apply(this, args);
         }, delay)

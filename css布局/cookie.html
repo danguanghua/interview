@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>用户名</label>
+        <input type="username">
+        <label>密码</label>
+        <input type="password">
+        <input type="checkbox" id = "rememberMe">
+        <label for="rememberMe"> 记住我</label>
+        <input type="submit" value = "登录">
+    </form>
+    <script>
+        const username = document.querySelector('input[type = "username"]')
+        const checkbox = document.querySelector('input[type = "checkbox"]')
+        const submit = document.querySelector('input[type = "submit"]')
+        // console.log("submit", submit)
+        let array = document.cookie
+                        .split(';')
+                        .map(cookie => cookie.split('='));
+
+        let cookie = {};
+        for (let i = 0; i < array.length; i ++) {
+            let name = array[i][0];
+            let value = array[i][1];
+            cookie[name] = decodeURIComponent(value);
+        }
+        submit.addEventListener('click', e => {
+            console.log("e", e)
+            if (checkbox.checked && username.value !== '') {
+                let key = 'username';
+                console.log(username.value)
+                let value = encodeURIComponent(username.value);
+                let twoDays = 2 * 24 * 60 * 60;
+                console.log(value)
+                document.cookie = `${key} = ${value}; max-age=${twoDays}`;
+            }
+            e.preventDefault();
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+localStorage会永久保存在浏览器里面,可以自行删除
+localStorage虽然被保存了下来，但它本身不参与服务器通信，web存储的容量比cookie大非常多
+localStorage是同步机制会影响浏览器的渲染进度
+SessionStorage也会保存在浏览器里，只不过关闭窗口就会删除
